@@ -53,8 +53,9 @@ public class Knapsack{
   }
 
   // Helper method to summarize input and print output
-  static void printResults(int table[][], int [] weights, int [] values){
+  static void printResults(int table[][], int [] weights, int [] values, int capacity){
 
+    System.out.println("--------------------------------------------");
     System.out.println("Knapsack Problem Parameters");
     
     System.out.print("Weights: " );    
@@ -69,6 +70,9 @@ public class Knapsack{
     }
     System.out.println();
 
+    System.out.println("Knapsack capacity: " + capacity);
+    System.out.println("Weights along top border, items on left border");
+    System.out.println("--------------------------------------------");
     printArray(table);
 
   }
@@ -84,7 +88,7 @@ public class Knapsack{
 
     int [][] table = Knapsack(weights, values, capacity);
 
-    printResults(table,weights,values);
+    printResults(table,weights,values, capacity);
   }
 
 }
